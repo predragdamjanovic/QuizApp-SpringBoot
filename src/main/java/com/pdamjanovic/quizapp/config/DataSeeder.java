@@ -6,11 +6,13 @@ import com.pdamjanovic.quizapp.repository.RoleRepository;
 import com.pdamjanovic.quizapp.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+@Component
 public class DataSeeder implements CommandLineRunner {
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;

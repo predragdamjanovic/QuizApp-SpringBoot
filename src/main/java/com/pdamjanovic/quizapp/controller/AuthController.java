@@ -27,4 +27,6 @@ public class AuthController {
         return ResponseEntity.status(HttpStatus.CREATED).body("Korisnik je uspešno registrovan: " + user.getUsername());
     }
 
+
+
 }

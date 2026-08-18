@@ -62,4 +62,11 @@ public class CategoryService {
         return new CategoryResponse(updated.getId(), updated.getName(), updated.getDescription());
 
     }
+
+    public CategoryResponse getCategoryByName(String name) {
+        Category category = categoryRepository.findByName(name)
+                .orElseThrow(() -> new IllegalArgumentException("Kategorija sa nazivom '" + name + "' ne postoji"));
+
+        return new CategoryResponse(category.getId(), category.getName(), category.getDescription());
+    }
 }
